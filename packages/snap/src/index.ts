@@ -1,5 +1,6 @@
 import { OnRpcRequestHandler } from '@metamask/snaps-types';
 import { panel, text } from '@metamask/snaps-ui';
+import { BIP44CoinTypeNode, getBIP44AddressKeyDeriver } from '@metamask/key-tree';
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -11,15 +12,34 @@ import { panel, text } from '@metamask/snaps-ui';
  * @returns The result of `snap_dialog`.
  * @throws If the request method is not valid for this snap.
  */
-export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
+export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => {
+  
+  // Get the Dogecoin node, corresponding to the path m/44'/3'
+  const dagNode : any = await snap.request({
+    method: 'snap_getBip44Entropy',
+    params: {
+      coinType: 1137, // = $DAG. from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
+    },
+  });
+
+  console.log(dagNode);
+
+  // Creates a function that takes an index and returns an extended private key for m/44'/3'/0'/0/address_index
+  // The second parameter to getBIP44AddressKeyDeriver is not passed. This sets account and change to 0
+  const deriveDagAddress = await getBIP44AddressKeyDeriver(dagNode);
+
+  // Derive the second DAG address, which has index 0
+  const dagAccount = await deriveDagAddress(0);
+
+
   switch (request.method) {
     case 'publish':
-      return snap.request({
+      return await snap.request({
         method: 'snap_dialog',
         params: {
           type: 'Confirmation',
           content: panel([
-            text(`Hello, **${origin}**!`),
+            text(`Hello, **${JSON.stringify(dagAccount)}**!`),
             text('Ready to publish your project?'),
             text('Here we go!'),
           ]),
