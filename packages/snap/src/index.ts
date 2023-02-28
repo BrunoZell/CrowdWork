@@ -1,6 +1,7 @@
 import { OnRpcRequestHandler } from '@metamask/snaps-types';
 import { panel, text } from '@metamask/snaps-ui';
 import { BIP44CoinTypeNode, getBIP44AddressKeyDeriver } from '@metamask/key-tree';
+import { dag4 } from '@stardust-collective/dag4';
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -29,8 +30,11 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
   const deriveDagAddress = await getBIP44AddressKeyDeriver(dagNode);
 
   // Derive the second DAG address, which has index 0
-  const dagAccount = await deriveDagAddress(0);
+  const dagAccount : any = await deriveDagAddress(0);
+  // {"depth":5,"parentFingerprint":1325694261,"index":0,"privateKey":"0xd76f211a053ca6d6fff20524392f72d34b4a5ffe4db676c2633d57e541f1ee5a","publicKey":"0x044ecb168ba757aa47c87976c9a71a7f0f1ef4d4d078f00704db47937e0da3fba5543771eb905edc13d87b67aa75aeafe03d15a416dd5ac9c531851db771d512b1","chainCode":"0x710d590aef36d9998beed11cbec5f80cc00c945c9255e4c31eeab4a564d04432"}!
 
+  dag4.account.loginPrivateKey(dagAccount.privateKey);
+  const address = dag4.account.address;
 
   switch (request.method) {
     case 'publish':
@@ -39,7 +43,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
         params: {
           type: 'Confirmation',
           content: panel([
-            text(`Hello, **${JSON.stringify(dagAccount)}**!`),
+            text(`Hello, **${address}**!`),
             text('Ready to publish your project?'),
             text('Here we go!'),
           ]),

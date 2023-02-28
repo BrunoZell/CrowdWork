@@ -48,7 +48,13 @@
     "prettier": "^2.2.1",
     "prettier-plugin-packagejson": "^2.2.11",
     "rimraf": "^3.0.2",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "@metamask/key-tree": "^6.2.1",
+    "@stardust-collective/dag4": "^1.2.5",
+    "@stardust-collective/dag4-core": "^1.2.2",
+    "@stardust-collective/dag4-keystore": "^1.2.3",
+    "@stardust-collective/dag4-network": "^1.2.4",
+    "@stardust-collective/dag4-wallet": "^2.0.2"
   },
   "packageManager": "yarn@3.2.1",
   "engines": {
@@ -57,8 +63,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "dependencies": {
-    "@metamask/key-tree": "^6.2.1"
   }
 }
