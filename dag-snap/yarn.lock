@@ -1297,12 +1297,12 @@
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.1.tgz#ebb651ee52ff84f420097055f4bf46cfba403938"
   integrity sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==
 
-"@stardust-collective/dag4-core@1.2.2", "@stardust-collective/dag4-core@^1.2.2":
+"@stardust-collective/dag4-core@1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@stardust-collective/dag4-core/-/dag4-core-1.2.2.tgz#20c7c6740f9125f0620ddd0db1a23187c9cc086f"
   integrity sha512-u0PuvLeLR4nvA0+aok8UHTO94GfKo1TEhEIsDH6DOLPBJPgm1R3eRW55Ni7si6hlhI2LPnspgbVKBWL/cvyrqw==
 
-"@stardust-collective/dag4-keystore@1.2.3", "@stardust-collective/dag4-keystore@^1.2.3":
+"@stardust-collective/dag4-keystore@1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@stardust-collective/dag4-keystore/-/dag4-keystore-1.2.3.tgz#40c2f102247d4cabfe60ad49ddabacfcf19d4e6e"
   integrity sha512-MOLDYhomyiFVfq6PxWCOR4TPMfszQsW+YApjn0Kobes/+Txr9W4qlzMdhqtqVk6Lu2t6PkQHHAzA3YVg/1xFKw==
@@ -1326,7 +1326,7 @@
     stream-browserify "^3.0.0"
     uuid "^3.4.0"
 
-"@stardust-collective/dag4-network@1.2.4", "@stardust-collective/dag4-network@^1.2.4":
+"@stardust-collective/dag4-network@1.2.4":
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/@stardust-collective/dag4-network/-/dag4-network-1.2.4.tgz#85bb7e21fec6b58a64f3621a80a0fddb0d065f25"
   integrity sha512-LpjqhijkH8WJh3ICNyALav0fEl7osq9vj91GyL29ne7IFUxENFQzHkzYKdZeJ1Ra1rd/CqzxApYD+lG2ObOIXg==
@@ -1335,7 +1335,7 @@
     bignumber.js "^9.0.1"
     rxjs "^6.6.3"
 
-"@stardust-collective/dag4-wallet@2.0.2", "@stardust-collective/dag4-wallet@^2.0.2":
+"@stardust-collective/dag4-wallet@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@stardust-collective/dag4-wallet/-/dag4-wallet-2.0.2.tgz#7c21d29427ed4d64b4eefc527883aa06d47fb6a0"
   integrity sha512-iKdAWJgVMNsb50YFfx03On/DQNxL4ySo5PIaaYJuA1j59PeiaGQhj8gipp0DaUekWAF02AbceBv10Sni6IZSUw==
@@ -2601,9 +2601,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.313"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.313.tgz#ff95f01926ab748c65beb23fc55f2f178e7a24a9"
-  integrity sha512-QckB9OVqr2oybjIrbMI99uF+b9+iTja5weFe0ePbqLb5BHqXOJUO1SG6kDj/1WtWPRIBr51N153AEq8m7HuIaA==
+  version "1.4.314"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.314.tgz#33e4ad7a2ca2ddbe2e113874cc0c0e2a00cb46bf"
+  integrity sha512-+3RmNVx9hZLlc0gW//4yep0K5SYKmIvB5DXg1Yg6varsuAHlHwTeqeygfS8DWwLCsNOWrgj+p9qgM5WYjw1lXQ==
 
 elliptic@^6.4.0, elliptic@^6.5.3, elliptic@^6.5.4:
   version "6.5.4"

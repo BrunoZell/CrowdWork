@@ -50,11 +50,7 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.7.4",
     "@metamask/key-tree": "^6.2.1",
-    "@stardust-collective/dag4": "^1.2.5",
-    "@stardust-collective/dag4-core": "^1.2.2",
-    "@stardust-collective/dag4-keystore": "^1.2.3",
-    "@stardust-collective/dag4-network": "^1.2.4",
-    "@stardust-collective/dag4-wallet": "^2.0.2"
+    "@stardust-collective/dag4": "^1.2.5"
   },
   "packageManager": "yarn@3.2.1",
   "engines": {
