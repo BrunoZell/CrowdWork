@@ -1,7 +1,8 @@
 import { OnRpcRequestHandler } from '@metamask/snaps-types';
 import { panel, text } from '@metamask/snaps-ui';
 import { BIP44CoinTypeNode, getBIP44AddressKeyDeriver } from '@metamask/key-tree';
-import { dag4 } from '@stardust-collective/dag4';
+// import * as dag4 from '@stardust-collective/dag4';
+import dag4 from '@stardust-collective/dag4';
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
