@@ -8,7 +8,7 @@ case class FiveAndMoreYears() extends Experience
 
 case class Skill(skill: String, experience: Experience, interest: Integer)
 
-// Request sent and signed by the project creator to list a new project
+// Request sent and signed by the builder to list create or update his profile
 case class UpdateBuilderProfile(
   builderWalletAddress: String,
   name: String,
