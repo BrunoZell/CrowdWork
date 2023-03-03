@@ -1,17 +1,30 @@
 package org.acme.domain
 
 object Skills {
-    val Fullstack = new Array[String](
+    val Fullstack_Languages = new Array[String](
         "JavaScript",
+        "Java",
+        "Rust",
+        "Python",
+        "C#",
+        "C#"
+    )
+
+    val Fullstack_Frontend = new Array[String](
         "Metamask",
         "web3.js",
         "dag4.js",
         "Stargazer Wallet",
-        "Java",
         "Vue.js",
         "Angular",
-        "React",
-        "Javascript"
+        "React"
+    )
+
+    val Fullstack_Seconday = new Array[String](
+        "Git",
+        "Agile",
+        "Auditing",
+        "DevOps"
     )
     
     val Contract = new Array[String](
