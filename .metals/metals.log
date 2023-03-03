@@ -1,0 +1,68 @@
+2023.03.03 00:22:49 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Repos\CrowdWork\.metals\lsp.trace.json or C:\Users\Bruno\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2023.03.03 00:22:52 INFO  logging to file C:\Repos\CrowdWork\.metals\metals.log
+2023.03.03 00:22:52 INFO  Started: Metals version 0.11.10 in workspace 'C:\Repos\CrowdWork' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/C:/Users/Bruno/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.03 00:23:02 INFO  time: initialize in 10s
+2023.03.03 00:23:03 WARN  Build server is not auto-connectable.
+2023.03.03 00:23:03 WARN  no build tool detected in workspace 'C:\Repos\CrowdWork'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.03 00:23:04 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\Main.scala
+2023.03.03 00:23:04 WARN  no build target for: C:\Repos\CrowdWork\state-channel\project\Dependencies.scala
+2023.03.03 00:23:24 INFO  no build target found for C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\Main.scala. Using presentation compiler with project's scala-library version: 3.2.1
+2023.03.03 00:23:30 INFO  time: code lens generation in 26s
+2023.03.03 00:42:52 WARN  no build target for: C:\Repos\CrowdWork\state-channel\build.sbt
+Mar 03, 2023 12:43:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.03.03 00:46:34 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\Main.scala
+2023.03.03 00:47:54 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\Main.scala
+2023.03.03 00:49:36 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\Main.scala
+Mar 03, 2023 12:50:15 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.03.03 00:56:27 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+Mar 03, 2023 12:56:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 195
+2023.03.03 00:56:37 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 00:56:39 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 00:57:26 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 00:57:27 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+Mar 03, 2023 1:00:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 569
+2023.03.03 01:02:34 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:03:57 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:05:37 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:05:37 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:05:45 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:05:46 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:05:46 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:05:47 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:05:51 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+Mar 03, 2023 1:06:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 846
+2023.03.03 01:06:18 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:06:23 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:06:45 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:06:47 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:07:04 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+Mar 03, 2023 1:07:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 968
+2023.03.03 01:07:30 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:07:31 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+Mar 03, 2023 1:07:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1068
+Mar 03, 2023 1:07:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1069
+Mar 03, 2023 1:07:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1070
+Mar 03, 2023 1:07:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1071
+2023.03.03 01:07:58 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:07:59 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:08:06 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\models.scala
+2023.03.03 01:08:15 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\project.scala
+2023.03.03 01:08:38 WARN  no build target for: C:\Repos\CrowdWork\state-channel\modules\state-channel\src\main\scala\org\acme\domain\project.scala
+Mar 03, 2023 1:08:40 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
