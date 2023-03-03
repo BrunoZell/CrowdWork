@@ -5,8 +5,7 @@ case class UpdateInvestorProfile(
   investorWalletAddress: String,
   name: String,
   bio: String,
-  interests: Array[String],
-  disinterests: Array[String]
+  interests: Array[String]
 )
 
 // (most recent) snapshot of an investors profile
