@@ -20,7 +20,7 @@ object Skills {
         "React"
     )
 
-    val Fullstack_Seconday = new Array[String](
+    val Fullstack_Secondary = new Array[String](
         "Git",
         "Agile",
         "Auditing",
