@@ -22,7 +22,7 @@ import org.tessellation.shared.sharedKryoRegistrar
 
 object Main extends IOApp {
 
-  val NETWORK_API = "testnet.lb.constellationnetwork.io:9000"
+  val NETWORK_API = "l0-lb-testnet.constellationnetwork.io"
 
   def run(args: List[String]): IO[ExitCode] =
     SecurityProvider
@@ -64,7 +64,7 @@ object Main extends IOApp {
 
                 request = Request[IO](
                   method = POST,
-                  uri = Uri.unsafeFromString(s"http://${NETWORK_API}/state-channels/${address}/snapshot")
+                  uri = Uri.unsafeFromString(s"https://${NETWORK_API}/state-channels/${address}/snapshot")
                 ).withEntity(signedStateChannelSnapshot)
                 result <- httpClient.successful(request)
 
