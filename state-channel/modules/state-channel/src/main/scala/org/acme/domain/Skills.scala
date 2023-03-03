@@ -1,6 +1,7 @@
 package org.acme.domain
 
 object Skills {
+    /// ### Fullstack ###
     val Fullstack_Languages = new Array[String](
         "JavaScript",
         "Java",
@@ -28,6 +29,7 @@ object Skills {
         "WASM"
     )
     
+    /// ### Smart Contract Dev ###
     val Contract_Languages = new Array[String](
         "Solidity",
         "Vyper",
@@ -65,14 +67,16 @@ object Skills {
         "IPLD"
     )
     
-    val Designer = new Array[String](
+    /// ### Designer ###
+    val Designer_Tools = new Array[String](
         "Figma",
         "Photoshop",
         "WebFlow",
         "Bubble.io",
     )
-    
-    val Marketing = new Array[String](
+
+    /// ### Marketeer ###
+    val Marketeer_Tools = new Array[String](
         "Mailchimp",
         "SEO",
         "Print"
