@@ -7,7 +7,7 @@ object Skills {
         "Rust",
         "Python",
         "C#",
-        "C#"
+        "C++"
     )
 
     val Fullstack_Frontend = new Array[String](
@@ -24,10 +24,11 @@ object Skills {
         "Git",
         "Agile",
         "Auditing",
-        "DevOps"
+        "DevOps",
+        "WASM"
     )
     
-    val Contract = new Array[String](
+    val Contract_Languages = new Array[String](
         "Solidity",
         "Vyper",
         "EVM IL",
@@ -38,6 +39,30 @@ object Skills {
         "Noir",
         "Scala",
         "Rust",
+    )
+
+    val Contract_Platforms = new Array[String](
+        "Ethereum",
+        "HGTP",
+        "Solana",
+        "Polkadot",
+        "Cardano",
+        "BSC"
+    )
+    
+    val Contract_Tools = new Array[String](
+        "Hardhat",
+        "Truffle",
+        "VS Code",
+        "Atom",
+        "ether.js"
+    )
+    
+    val Contract_Secondary = new Array[String](
+        "EVM",
+        "WASM",
+        "IPFS",
+        "IPLD"
     )
     
     val Designer = new Array[String](
