@@ -2,9 +2,44 @@ import { OnRpcRequestHandler } from '@metamask/snaps-types';
 import { panel, text } from '@metamask/snaps-ui';
 import { BIP44CoinTypeNode, getBIP44AddressKeyDeriver } from '@metamask/key-tree';
 // import * as dag4 from '../dag/dag4';
-import {DagAccount} from "../dag/dag4-wallet"
+// import {DagAccount} from "../dag/dag4-wallet/dag-account"
+const secp = require("@noble/secp256k1");
+import * as jsSha256 from "js-sha256";
+import * as bs58 from 'bs58';
+import {Buffer} from 'buffer';
 // import dag4 from '../dag4';
 // import dagWrapper from "../../dag-account/dist/app"
+
+const CONSTANTS = {
+  PKCS_PREFIX: '3056301006072a8648ce3d020106052b8104000a034200' //Removed last 2 digits. 04 is part of Public Key.
+}
+
+var getPublicKeyFromPrivate = function (privateKey: string, compact = false) {
+    return Buffer.from(secp.getPublicKey(privateKey, compact)).toString('hex');
+}
+
+var getDagAddressFromPublicKey = function (publicKeyHex: string) {
+
+  //PKCS standard requires a prefix '04' for an uncompressed Public Key
+  // An uncompressed public key consists of a 64-byte number; 2 bytes per number in HEX is 128
+  // Check to see if prefix is missing
+  if (publicKeyHex.length === 128) {
+    publicKeyHex = '04' + publicKeyHex;
+  }
+
+  publicKeyHex = CONSTANTS.PKCS_PREFIX + publicKeyHex;
+
+  const sha256Str = jsSha256.sha256(Buffer.from(publicKeyHex, 'hex'));
+
+  const bytes = Buffer.from(sha256Str, 'hex');
+  const hash = bs58.encode(bytes);
+
+  let end = hash.slice(hash.length - 36, hash.length);
+  let sum = end.split('').reduce((val: number, char: any) => (isNaN(char) ? val : val + (+char)), 0);
+  let par = sum % 9;
+
+  return ('DAG' + par + end);
+}
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -37,11 +72,8 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
 
   console.log(dagAccount);
 
-  const acc = new DagAccount(null);
-
-  acc.loginPrivateKey(dagAccount.privateKey);
-
-  const address = acc.address;
+  const publicKey = getPublicKeyFromPrivate(dagAccount.privateKey);
+  const address = getDagAddressFromPublicKey(publicKey);
 
   switch (request.method) {
     case 'publish':
