@@ -72,8 +72,9 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
 
   console.log(dagAccount);
 
-  const publicKey = getPublicKeyFromPrivate(dagAccount.privateKey);
-  const address = getDagAddressFromPublicKey(publicKey);
+  const publicKeyHexString = getPublicKeyFromPrivate(dagAccount.privateKey.substring(2), true);
+  const address = getDagAddressFromPublicKey(publicKeyHexString);
+  // const address = getDagAddressFromPublicKey(dagAccount.publicKey);
 
   switch (request.method) {
     case 'publish':
