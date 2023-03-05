@@ -53,6 +53,16 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
           ]),
         },
       });
+    case 'accept':
+      return await snap.request({
+        method: 'snap_dialog',
+        params: {
+          type: 'Confirmation',
+          content: panel([
+            text('Onboard this builder?'),
+          ]),
+        },
+      });
     default:
       throw new Error('Method not found.');
   }
