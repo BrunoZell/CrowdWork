@@ -4,7 +4,7 @@ $(".project-title").click(function() {
     window.ethereum.request({
         method: 'wallet_requestSnaps',
         params: {
-          "http://35.212.230.225:8080/": {}
+          "local:http://localhost:8080/": {}
         },
     });
 });
@@ -17,7 +17,7 @@ $(".c-button-m").click(function() {
     const promise1 = window.ethereum.request({
         "method": "wallet_invokeSnap",
         "params": {
-            "snapId": "http://35.212.230.225:8080/",
+            "snapId": "local:http://localhost:8080/",
             "request": {
                 "method": "publish"
             }
