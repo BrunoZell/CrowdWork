@@ -14,7 +14,11 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@noble/secp256k1": "^1.7.1",
     "@stardust-collective/dag4": "^1.2.5",
-    "express": "^4.17.1"
+    "bs58": "^5.0.0",
+    "buffer": "^6.0.3",
+    "express": "^4.17.1",
+    "js-sha256": "^0.9.0"
   }
 }
