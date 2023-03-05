@@ -5,6 +5,7 @@ import { BIP44CoinTypeNode, getBIP44AddressKeyDeriver } from '@metamask/key-tree
 // import {DagAccount} from "../dag/dag4-wallet/dag-account"
 const secp = require("@noble/secp256k1");
 import * as jsSha256 from "js-sha256";
+import * as jsSha512 from "js-sha512";
 import * as bs58 from 'bs58';
 import {Buffer} from 'buffer';
 // import dag4 from '../dag4';
@@ -39,6 +40,14 @@ var getDagAddressFromPublicKey = function (publicKeyHex: string) {
   let par = sum % 9;
 
   return ('DAG' + par + end);
+}
+
+
+var sign = async function (privateKey: string, msg: string) {
+  const sha512Hash = jsSha512.sha512(msg);
+
+  const sig = await secp.sign(sha512Hash, privateKey);
+  return Buffer.from(sig).toString('hex');
 }
 
 /**
@@ -78,7 +87,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
 
   switch (request.method) {
     case 'publish':
-      return await snap.request({
+      var result = await snap.request({
         method: 'snap_dialog',
         params: {
           type: 'Confirmation',
@@ -89,8 +98,17 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
           ]),
         },
       });
+
+      if(result === true) {
+        // const signature = await sign(dagAccount.privateKey.substring(2), request["message"]);
+        return JSON.stringify(request);
+      } else {
+        return null;
+      }
+      
     case 'accept':
-      return await snap.request({
+      
+      var result = await snap.request({
         method: 'snap_dialog',
         params: {
           type: 'Confirmation',
@@ -99,6 +117,14 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
           ]),
         },
       });
+
+      if(result === true) {
+        // const signature = await sign(dagAccount.privateKey.substring(2), request["message"]);
+        return JSON.stringify(request);
+      } else {
+        return null;
+      }
+      
     default:
       throw new Error('Method not found.');
   }
