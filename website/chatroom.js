@@ -53,7 +53,7 @@ $(".accept-last").click(function() {
     promise1.then((value) => {
         console.log("last accept done. Result:");
         console.log(value);
-        window.location.href = "https://crowdwork.webflow.io/investors" // url to investor page
+        window.location.href = "https://crowdwork.webflow.io/mmarket" // url to investor page
       });
 });
 
