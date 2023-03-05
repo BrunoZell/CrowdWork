@@ -1,5 +1,5 @@
 
-$(".connect").click(function() {
+$(".project-title").click(function() {
     console.log("connect clicked");
     window.ethereum.request({
         method: 'wallet_requestSnaps',
@@ -11,7 +11,7 @@ $(".connect").click(function() {
 
 
 
-$(".shipit").click(function() {
+$(".c-button-m").click(function() {
     console.log("publish project");
 
     const promise1 = window.ethereum.request({
@@ -27,7 +27,7 @@ $(".shipit").click(function() {
     promise1.then((value) => {
         console.log("dialog done. Result:");
         console.log(value);
-        window.location.href = "" // url to chatroom
+        window.location.href = "https://crowdwork.webflow.io/chatroom" // url to chatroom
       });
 });
 
@@ -60,6 +60,6 @@ $(".accept-last").click(function() {
     promise1.then((value) => {
         console.log("last accept done. Result:");
         console.log(value);
-        window.location.href = "" // url to investor page
+        window.location.href = "https://crowdwork.webflow.io/investors" // url to investor page
       });
 });
