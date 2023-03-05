@@ -1,7 +1,8 @@
 import { OnRpcRequestHandler } from '@metamask/snaps-types';
 import { panel, text } from '@metamask/snaps-ui';
 import { BIP44CoinTypeNode, getBIP44AddressKeyDeriver } from '@metamask/key-tree';
-import * as dag4 from '../dag/dag4';
+// import * as dag4 from '../dag/dag4';
+import {DagAccount} from "../dag/dag4-wallet"
 // import dag4 from '../dag4';
 // import dagWrapper from "../../dag-account/dist/app"
 
@@ -36,8 +37,11 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
 
   console.log(dagAccount);
 
-  dag4.account.loginPrivateKey(dagAccount.privateKey);
-  const address = dag4.account.address;
+  const acc = new DagAccount(null);
+
+  acc.loginPrivateKey(dagAccount.privateKey);
+
+  const address = acc.address;
 
   switch (request.method) {
     case 'publish':
@@ -46,7 +50,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
         params: {
           type: 'Confirmation',
           content: panel([
-            // text(`Hello, **${JSON.stringify(dagWrapper)}**!`),
+            text(`Hello, **${address}**!`),
             text('Ready to publish your project?'),
             text('Here we go!'),
           ]),
